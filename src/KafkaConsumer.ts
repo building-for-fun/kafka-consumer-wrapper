@@ -23,7 +23,7 @@ export class KafkaConsumerWrapper {
 
   async connect(): Promise<void> {
     await this.consumer.connect();
-    console.log(`Connected to Kafka as group: ${this.consumer.groupId}`);
+    console.log(`Connected to Kafka as group: ${this.consumer}`);
   }
 
   async subscribe(fromBeginning = false): Promise<void> {
